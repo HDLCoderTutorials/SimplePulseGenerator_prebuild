@@ -33,3 +33,10 @@ codegen/
 
 # Octave session info
 octave-workspace
+
+# HDL hode generation folders
+# Note: These may actually be valuable, since synthesis takes about 20 minutes.
+hdl_prj/
+
+# Log generated when Xilinx RFTool is used to setup the RFSoC
+RFTool_Log.txt
