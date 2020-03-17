@@ -33,7 +33,7 @@ incr = round(Fo*incrScale/VectorSamplingFactor); % phase increment
 
 
 %% 
-PRF = 10; %12Hz seems to be the max for continuous streaming
+PRF = 10000; %12Hz seems to be the max for continuous streaming
 PRF_period = 1/PRF; % seconds
 PRF_count_period = PRF_period*fpga_clk_rate;
 
