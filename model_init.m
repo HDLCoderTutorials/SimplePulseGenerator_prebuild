@@ -25,12 +25,6 @@ fpga_clk_rate = Fs/VectorSamplingFactor;
 
 fpga_Ts = 1/fpga_clk_rate;
 
-N = 14;    % accum WL
-
-Fs = 1/Ts;      
-incrScale = (2^N)/Fs;
-incr = round(Fo*incrScale/VectorSamplingFactor); % phase increment
-
 
 %% 
 PRF = 10000; %12Hz seems to be the max for continuous streaming
@@ -45,3 +39,19 @@ RangeDelayTrigger_count=Range_Delay*fpga_clk_rate; %wlh
 
 frameSize = 1024; %wlh
 actual_samples_per_frame = frameSize*4; %wlh
+
+
+% Chirp setup max freq 250MHz based on 512MHz DAC rate, super sample 128MHz
+% * 4
+
+f0 = 100e6;
+f1 = 124e6; 
+
+N = 14;    % accum WL
+
+start_inc = floor(f0*2^N / fpga_clk_rate);
+end_inc = floor(f1*2^N / fpga_clk_rate);
+
+%Pulse width and frequencies must be chosen so that LFM_counter_inc is an
+%integer
+LFM_counter_inc = (end_inc-start_inc)/PulseWidth_count;
