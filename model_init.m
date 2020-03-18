@@ -32,7 +32,7 @@ PRF_period = 1/PRF; % seconds
 PRF_count_period = PRF_period*fpga_clk_rate;
 
 PulseWidth = 3e-6; % seconds
-PulseWidth_count = PulseWidth*fpga_clk_rate; 
+PulseWidth_count = PulseWidth*fpga_clk_rate;
 
 Range_Delay=1e-6; % seconds wlh
 RangeDelayTrigger_count=Range_Delay*fpga_clk_rate; %wlh
@@ -45,13 +45,13 @@ actual_samples_per_frame = frameSize*4; %wlh
 % * 4
 
 f0 = 100e6;
-f1 = 124e6; 
+f1 = 150e6; 
 
 N = 14;    % accum WL
 
-start_inc = floor(f0*2^N / fpga_clk_rate);
-end_inc = floor(f1*2^N / fpga_clk_rate);
+start_inc = round (((f0*2^N)/Fs)/VectorSamplingFactor);
+end_inc = round (((f1*2^N)/Fs)/VectorSamplingFactor);
 
 %Pulse width and frequencies must be chosen so that LFM_counter_inc is an
-%integer
-LFM_counter_inc = (end_inc-start_inc)/PulseWidth_count;
+%integer, will round here which changes end freq
+LFM_counter_inc = round((end_inc-start_inc)/PulseWidth_count);
