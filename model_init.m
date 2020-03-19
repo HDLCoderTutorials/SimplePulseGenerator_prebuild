@@ -10,8 +10,7 @@
 %
 % % For DAC NCO definition
 
-% NCO parameters
-Fo = 200.7e6;  % tone freq
+
 
 ConverterSamplingRate = 2048e6;
 DDC_DUC_factor = 4;
@@ -31,26 +30,22 @@ PRF = 10000; %12Hz seems to be the max for continuous streaming
 PRF_period = 1/PRF; % seconds
 PRF_count_period = PRF_period*fpga_clk_rate;
 
-PulseWidth = 3e-6; % seconds
+PulseWidth = 10e-6; % seconds
 PulseWidth_count = PulseWidth*fpga_clk_rate;
 
-Range_Delay=1e-6; % seconds wlh
+Range_Delay=1/fpga_clk_rate; % seconds wlh just on clock now to see start of pulse
 RangeDelayTrigger_count=Range_Delay*fpga_clk_rate; %wlh
 
 frameSize = 1024; %wlh
 actual_samples_per_frame = frameSize*4; %wlh
 
-
-% Chirp setup max freq 250MHz based on 512MHz DAC rate, super sample 128MHz
-% * 4
-
-f0 = 100e6;
-f1 = 150e6; 
+f0 = 1e6;
+f1 = 128e6; 
 
 N = 14;    % accum WL
 
-start_inc = round (((f0*2^N)/Fs)/VectorSamplingFactor);
-end_inc = round (((f1*2^N)/Fs)/VectorSamplingFactor);
+start_inc = round (((f0*2^N)/fpga_clk_rate)/VectorSamplingFactor);
+end_inc = round (((f1*2^N)/fpga_clk_rate)/VectorSamplingFactor);
 
 %Pulse width and frequencies must be chosen so that LFM_counter_inc is an
 %integer, will round here which changes end freq

@@ -1,8 +1,8 @@
 %--------------------------------------------------------------------------
 % HDL Workflow Script
-% Generated with MATLAB 9.7 (R2019b) at 14:00:23 on 03/03/2020
+% Generated with MATLAB 9.7 (R2019b) at 12:59:01 on 18/03/2020
 % This script was generated using the following parameter values:
-%     Filename  : 'C:\Projects\MATLAB\HDLCoder\SimplePulseGenerator\hdlworkflow.m'
+%     Filename  : 'C:\Projects\MATLAB\HDLCoder\SimplePulseGenerator_prebuild\hdlworkflow.m'
 %     Overwrite : true
 %     Comments  : true
 %     Headers   : true
@@ -155,6 +155,10 @@ hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/RangeDe
 hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/PulseWidth_count', 'IOInterface', 'AXI4');
 hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/PulseWidth_count', 'IOInterfaceMapping', 'x"13C"');
 
+% Set Inport HDL parameters
+hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_end_incr_AXI', 'IOInterface', 'AXI4');
+hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_end_incr_AXI', 'IOInterfaceMapping', 'x"100"');
+
 % Set MATLABSystem HDL parameters
 hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_Transmit/NCO HDL Optimized1', 'LUTRegisterResetType', 'none');
 
@@ -242,11 +246,11 @@ hWC.ReferenceDesignToolVersion = '2018.3';
 hWC.IgnoreToolVersionMismatch = false;
 
 % Set Workflow tasks to run
-hWC.RunTaskGenerateRTLCodeAndIPCore = false;
-hWC.RunTaskCreateProject = false;
-hWC.RunTaskGenerateSoftwareInterfaceModel = false;
-hWC.RunTaskBuildFPGABitstream = false;
-hWC.RunTaskProgramTargetDevice = true;
+hWC.RunTaskGenerateRTLCodeAndIPCore = true;
+hWC.RunTaskCreateProject = true;
+hWC.RunTaskGenerateSoftwareInterfaceModel = true;
+hWC.RunTaskBuildFPGABitstream = true;
+hWC.RunTaskProgramTargetDevice = false;
 
 % Set properties related to 'RunTaskGenerateRTLCodeAndIPCore' Task
 hWC.IPCoreRepository = '';
