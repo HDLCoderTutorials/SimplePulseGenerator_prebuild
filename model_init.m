@@ -39,8 +39,8 @@ RangeDelayTrigger_count=Range_Delay*fpga_clk_rate; %wlh
 frameSize = 1024; %wlh
 actual_samples_per_frame = frameSize*4; %wlh
 
-f0 = 64e6;
-f1 = 256e6; 
+f0 = -192e6;
+f1 = 192e6; 
 
 N = 14;    % accum WL
 
