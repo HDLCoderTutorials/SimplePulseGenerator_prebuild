@@ -83,7 +83,7 @@ setup(StreamEn,boolean(0));
 setup(TriggerFreq,uint32(0)); 
 setup(AutoTrigEn,boolean(0)); 
 setup(IQ_SelectCh,uint32(0)); 
-setup(NCO_incr_AXI,uint32(0)); 
+setup(NCO_incr_AXI,int32(0)); 
 setup(NCO_DAC_Ch0_AXI,fi(0,numerictype('ufix8_En7'))); 
 setup(NCO_DAC_Ch1_AXI,fi(0,numerictype('ufix8_En7'))); 
 setup(NCO_DAC_Ch2_AXI,fi(0,numerictype('ufix8_En7'))); 
@@ -92,7 +92,7 @@ setup(DebugSource,uint32(0));
 setup(PRF_count_period,uint32(0)); 
 setup(RangeDelayTrigger_count,uint32(0)); 
 setup(PulseWidth_count,uint32(0)); 
-setup(NCO_end_incr_AXI,uint32(0)); 
+setup(NCO_end_incr_AXI,int32(0)); 
 
 
 %% Step() AXI4 MM IIO Objects
@@ -106,7 +106,7 @@ setup(NCO_end_incr_AXI,uint32(0));
 % step(TriggerFreq,uint32(0)); 
 % step(AutoTrigEn,boolean(0)); 
 % step(IQ_SelectCh,uint32(0)); 
-% step(NCO_incr_AXI,uint32(0)); 
+% step(NCO_incr_AXI,int32(0)); 
 % step(NCO_DAC_Ch0_AXI,fi(0,numerictype('ufix8_En7'))); 
 % step(NCO_DAC_Ch1_AXI,fi(0,numerictype('ufix8_En7'))); 
 % step(NCO_DAC_Ch2_AXI,fi(0,numerictype('ufix8_En7'))); 
@@ -115,4 +115,4 @@ setup(NCO_end_incr_AXI,uint32(0));
 % step(PRF_count_period,uint32(0)); 
 % step(RangeDelayTrigger_count,uint32(0)); 
 % step(PulseWidth_count,uint32(0)); 
-% step(NCO_end_incr_AXI,uint32(0)); 
+% step(NCO_end_incr_AXI,int32(0)); 
