@@ -1,8 +1,8 @@
 %--------------------------------------------------------------------------
 % HDL Workflow Script
-% Generated with MATLAB 9.7 (R2019b) at 12:59:01 on 18/03/2020
+% Generated with MATLAB 9.7 (R2019b) at 19:19:39 on 28/03/2020
 % This script was generated using the following parameter values:
-%     Filename  : 'C:\Projects\MATLAB\HDLCoder\SimplePulseGenerator_prebuild\hdlworkflow.m'
+%     Filename  : 'D:\MY_DATA\HDL_projects\SimplePulseGenerator\hdlworkflow.m'
 %     Overwrite : true
 %     Comments  : true
 %     Headers   : true
