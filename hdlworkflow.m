@@ -1,8 +1,8 @@
 %--------------------------------------------------------------------------
 % HDL Workflow Script
-% Generated with MATLAB 9.7 (R2019b) at 19:19:39 on 28/03/2020
+% Generated with MATLAB 9.7 (R2019b) at 13:30:09 on 01/04/2020
 % This script was generated using the following parameter values:
-%     Filename  : 'D:\MY_DATA\HDL_projects\SimplePulseGenerator\hdlworkflow.m'
+%     Filename  : 'C:\Projects\MATLAB\HDLCoder\SimplePulseGenerator_prebuild\hdlworkflow.m'
 %     Overwrite : true
 %     Comments  : true
 %     Headers   : true
@@ -246,11 +246,11 @@ hWC.ReferenceDesignToolVersion = '2018.3';
 hWC.IgnoreToolVersionMismatch = false;
 
 % Set Workflow tasks to run
-hWC.RunTaskGenerateRTLCodeAndIPCore = true;
-hWC.RunTaskCreateProject = true;
-hWC.RunTaskGenerateSoftwareInterfaceModel = true;
-hWC.RunTaskBuildFPGABitstream = true;
-hWC.RunTaskProgramTargetDevice = false;
+hWC.RunTaskGenerateRTLCodeAndIPCore = false;
+hWC.RunTaskCreateProject = false;
+hWC.RunTaskGenerateSoftwareInterfaceModel = false;
+hWC.RunTaskBuildFPGABitstream = false;
+hWC.RunTaskProgramTargetDevice = true;
 
 % Set properties related to 'RunTaskGenerateRTLCodeAndIPCore' Task
 hWC.IPCoreRepository = '';
