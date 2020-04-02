@@ -1,6 +1,6 @@
 %--------------------------------------------------------------------------
 % HDL Workflow Script
-% Generated with MATLAB 9.7 (R2019b) at 13:30:09 on 01/04/2020
+% Generated with MATLAB 9.7 (R2019b) at 15:36:31 on 02/04/2020
 % This script was generated using the following parameter values:
 %     Filename  : 'C:\Projects\MATLAB\HDLCoder\SimplePulseGenerator_prebuild\hdlworkflow.m'
 %     Overwrite : true
@@ -158,6 +158,10 @@ hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/PulseWi
 % Set Inport HDL parameters
 hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_end_incr_AXI', 'IOInterface', 'AXI4');
 hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_end_incr_AXI', 'IOInterfaceMapping', 'x"100"');
+
+% Set Inport HDL parameters
+hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_step_value_AXI', 'IOInterface', 'AXI4');
+hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_step_value_AXI', 'IOInterfaceMapping', 'x"140"');
 
 % Set MATLABSystem HDL parameters
 hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_Transmit/NCO HDL Optimized1', 'LUTRegisterResetType', 'none');
