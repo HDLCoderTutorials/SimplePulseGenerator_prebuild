@@ -1,6 +1,6 @@
 %--------------------------------------------------------------------------
 % HDL Workflow Script
-% Generated with MATLAB 9.7 (R2019b) at 19:19:39 on 28/03/2020
+% Generated with MATLAB 9.7 (R2019b) at 16:10:38 on 11/04/2020
 % This script was generated using the following parameter values:
 %     Filename  : 'D:\MY_DATA\HDL_projects\SimplePulseGenerator\hdlworkflow.m'
 %     Overwrite : true
@@ -160,16 +160,7 @@ hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_end
 hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_end_incr_AXI', 'IOInterfaceMapping', 'x"100"');
 
 % Set MATLABSystem HDL parameters
-hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_Transmit/NCO HDL Optimized1', 'LUTRegisterResetType', 'none');
-
-% Set MATLABSystem HDL parameters
-hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_Transmit/NCO HDL Optimized2', 'LUTRegisterResetType', 'none');
-
-% Set MATLABSystem HDL parameters
-hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_Transmit/NCO HDL Optimized3', 'LUTRegisterResetType', 'none');
-
-% Set MATLABSystem HDL parameters
-hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_Transmit/NCO HDL Optimized4', 'LUTRegisterResetType', 'none');
+hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_Transmit/Vectorized NCO/For Each NCO Vectorized/NCO HDL Optimized1', 'LUTRegisterResetType', 'none');
 
 % Set Outport HDL parameters
 hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/S2MM_Valid', 'IOInterface', 'AXI4-Stream DMA Master');
