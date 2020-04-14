@@ -12,10 +12,10 @@ processing.
 - [x] Initialize LFS - run `git lfs install` on the CLI or setup LFS in GitKraken
 - [x] Fix initialization of first pulse
 - [x] Add support for negative starting frequency f0, but positive f1
-- [ ] Support negative starting frequencies in Host_IO_DataCapture.slx interface
-- [ ] Replace array of discrete HDL NCO blocks with a single For block
+- [x] Support negative starting frequencies in Host_IO_DataCapture.slx interface
+- [x] Replace array of discrete HDL NCO blocks with a single For block
 - [ ] Add support for negative chirps (f0 > f1 )
-- [ ] Integrate custom replacement for HDL Counter with increment input port
+- [x] Integrate custom replacement for HDL Counter with increment input port
 - [x] Build bitstream for chirped pulse
 - [ ] Run chirped pulse on hardware and verify output
 
