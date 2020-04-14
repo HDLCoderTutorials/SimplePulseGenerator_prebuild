@@ -63,6 +63,9 @@ PulseWidth_count =  pspshared.libiio.aximm.write(...
 NCO_end_incr_AXI =  pspshared.libiio.aximm.write(...
                    'IPAddress',IPAddr,...
                    'AddressOffset',hex2dec('100')); 
+NCO_step_value_AXI =  pspshared.libiio.aximm.write(...
+                   'IPAddress',IPAddr,...
+                   'AddressOffset',hex2dec('140')); 
 
 
 %% AXI4 MM IIO Read registers
@@ -93,6 +96,7 @@ setup(PRF_count_period,uint32(0));
 setup(RangeDelayTrigger_count,uint32(0)); 
 setup(PulseWidth_count,uint32(0)); 
 setup(NCO_end_incr_AXI,int32(0)); 
+setup(NCO_step_value_AXI,int32(0)); 
 
 
 %% Step() AXI4 MM IIO Objects
@@ -116,3 +120,4 @@ setup(NCO_end_incr_AXI,int32(0));
 % step(RangeDelayTrigger_count,uint32(0)); 
 % step(PulseWidth_count,uint32(0)); 
 % step(NCO_end_incr_AXI,int32(0)); 
+% step(NCO_step_value_AXI,int32(0)); 

@@ -1,8 +1,8 @@
 %--------------------------------------------------------------------------
 % HDL Workflow Script
-% Generated with MATLAB 9.7 (R2019b) at 16:10:38 on 11/04/2020
+% Generated with MATLAB 9.7 (R2019b) at 17:14:56 on 13/04/2020
 % This script was generated using the following parameter values:
-%     Filename  : 'D:\MY_DATA\HDL_projects\SimplePulseGenerator\hdlworkflow.m'
+%     Filename  : 'C:\Projects\MATLAB\HDLCoder\SimplePulseGenerator_prebuild\hdlworkflow.m'
 %     Overwrite : true
 %     Comments  : true
 %     Headers   : true
@@ -159,6 +159,10 @@ hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/PulseWi
 hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_end_incr_AXI', 'IOInterface', 'AXI4');
 hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_end_incr_AXI', 'IOInterfaceMapping', 'x"100"');
 
+% Set Inport HDL parameters
+hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_step_value_AXI', 'IOInterface', 'AXI4');
+hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_step_value_AXI', 'IOInterfaceMapping', 'x"140"');
+
 % Set MATLABSystem HDL parameters
 hdlset_param('SimplePulseGenerator_4x4_HDL_IQ/ADC_Triggered_Data_Capture/NCO_Transmit/Vectorized NCO/For Each NCO Vectorized/NCO HDL Optimized1', 'LUTRegisterResetType', 'none');
 
@@ -237,11 +241,11 @@ hWC.ReferenceDesignToolVersion = '2018.3';
 hWC.IgnoreToolVersionMismatch = false;
 
 % Set Workflow tasks to run
-hWC.RunTaskGenerateRTLCodeAndIPCore = true;
-hWC.RunTaskCreateProject = true;
-hWC.RunTaskGenerateSoftwareInterfaceModel = true;
-hWC.RunTaskBuildFPGABitstream = true;
-hWC.RunTaskProgramTargetDevice = false;
+hWC.RunTaskGenerateRTLCodeAndIPCore = false;
+hWC.RunTaskCreateProject = false;
+hWC.RunTaskGenerateSoftwareInterfaceModel = false;
+hWC.RunTaskBuildFPGABitstream = false;
+hWC.RunTaskProgramTargetDevice = true;
 
 % Set properties related to 'RunTaskGenerateRTLCodeAndIPCore' Task
 hWC.IPCoreRepository = '';
