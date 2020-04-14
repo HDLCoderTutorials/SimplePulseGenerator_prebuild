@@ -26,7 +26,7 @@ fpga_Ts = 1/fpga_clk_rate;
 
 
 %% 
-PRF = 10000; %12Hz seems to be the max for continuous streaming
+PRF = 5; %12Hz seems to be the max for continuous streaming
 PRF_period = 1/PRF; % seconds
 PRF_count_period = PRF_period*fpga_clk_rate;
 
@@ -36,7 +36,8 @@ PulseWidth_count = PulseWidth*fpga_clk_rate;
 Range_Delay=1/fpga_clk_rate; % seconds wlh just on clock now to see start of pulse
 RangeDelayTrigger_count=Range_Delay*fpga_clk_rate; %wlh
 
-frameSize = PulseWidth_count+256; %wlh
+% frameSize = PulseWidth_count+256; %wlh
+frameSize = 1536; %wlh
 actual_samples_per_frame = frameSize*4; %wlh
 
 N = 14;    % accum WL
