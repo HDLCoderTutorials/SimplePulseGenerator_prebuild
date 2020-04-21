@@ -42,7 +42,7 @@ actual_samples_per_frame = frameSize*4; %wlh
 
 N = 14;    % accum WL
 
-f0 = -192e6;
+f0 = 50e6;
 f1 = 192e6; 
 
 start_inc = round (((f0*2^N)/fpga_clk_rate)/VectorSamplingFactor);
